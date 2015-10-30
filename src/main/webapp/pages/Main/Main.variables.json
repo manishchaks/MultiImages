@@ -1,0 +1,268 @@
+{
+	"EmployeesDBEmployeeData": {
+		"name": "EmployeesDBEmployeeData",
+		"type": "Employee",
+		"isList": true,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "EmployeesDB",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"category": "wm.LiveVariable",
+		"isDefault": true,
+		"_id": "wm-EmployeesDBEmployeeData-wm.LiveVariable-1446202676948",
+		"package": "com.multiimages.employeesdb.Employee",
+		"tableName": "Employee",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 1,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": ""
+				},
+				{
+					"fieldName": "fname",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "fname",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "lname",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "lname",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "city",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "city",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Employee",
+			"fullyQualifiedName": "com.multiimages.employeesdb.Employee",
+			"tableType": "TABLE"
+		},
+		"bindCount": 2
+	},
+	"EmployeesDBImageData": {
+		"name": "EmployeesDBImageData",
+		"type": "Image",
+		"isList": true,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "EmployeesDB",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"category": "wm.LiveVariable",
+		"isDefault": true,
+		"_id": "wm-EmployeesDBImageData-wm.LiveVariable-1446202687242",
+		"package": "com.multiimages.employeesdb.Image",
+		"tableName": "Image",
+		"tableType": "TABLE",
+		"properties": [
+			"employee"
+		],
+		"relatedTables": [
+			{
+				"columnName": "employee",
+				"relationName": "employee",
+				"type": "Employee",
+				"package": "com.EmployeesDB.Image",
+				"watchOn": "EmployeesDBEmployeeData"
+			}
+		],
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 1,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": ""
+				},
+				{
+					"fieldName": "imgdate",
+					"type": "blob",
+					"hibernateType": "binary",
+					"fullyQualifiedType": "blob",
+					"columnName": "imgdate",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "employee",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "empid",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": true,
+					"defaultValue": "0",
+					"relatedTableName": "Employee",
+					"relatedEntityName": "Employee",
+					"columns": [
+						{
+							"fieldName": "id",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "ID",
+							"isPrimaryKey": true,
+							"notNull": true,
+							"length": 1,
+							"precision": 19,
+							"generator": "identity",
+							"isRelated": false,
+							"defaultValue": "",
+							"isRelatedPk": "true"
+						},
+						{
+							"fieldName": "fname",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "fname",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						},
+						{
+							"fieldName": "lname",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "lname",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						},
+						{
+							"fieldName": "city",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "city",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						}
+					],
+					"relatedFieldName": "employee.id",
+					"disableInlineEditing": "true"
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Image",
+			"fullyQualifiedName": "com.multiimages.employeesdb.Image",
+			"tableType": "TABLE"
+		},
+		"bindCount": 2
+	}
+}

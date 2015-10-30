@@ -1,0 +1,222 @@
+{
+	"goToPage_Main": {
+		"name": "goToPage_Main",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Main",
+		"dataBinding": {},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Main-wm.NavigationVariable1389180517517"
+	},
+	"supportedLocale": {
+		"name": "supportedLocale",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"en": "English"
+		},
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"type": "object",
+				"fields": [
+					{
+						"name": "dataValue",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-supportedLocale-wm.Variable1402640443182"
+	},
+	"goToPage_Page": {
+		"name": "goToPage_Page",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Page",
+		"dataBinding": {},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Page-wm.NavigationVariable-1446203449302"
+	},
+	"FileServiceUploadFile": {
+		"name": "FileServiceUploadFile",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "FileService",
+		"operation": "uploadFile",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "JavaService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"methodType": "post",
+			"name": "uploadFile",
+			"relativePath": "/file/uploadFile",
+			"consumes": [
+				"multipart/form-data"
+			],
+			"parameters": [
+				{
+					"name": "formdata",
+					"parameterType": "formData"
+				},
+				{
+					"name": "relativePath",
+					"parameterType": "query"
+				}
+			]
+		},
+		"_id": "wm-FileServiceUploadFile-wm.ServiceVariable-1446203459293"
+	},
+	"InsertMultiImgUploadFile": {
+		"name": "InsertMultiImgUploadFile",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "eid",
+						"type": "string"
+					},
+					{
+						"type": "array"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "InsertMultiImg",
+		"operation": "uploadFile",
+		"operationType": "post",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "JavaService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"methodType": "post",
+			"name": "uploadFile",
+			"relativePath": "/insertMultiImg/uploadFile",
+			"consumes": [
+				"multipart/form-data"
+			],
+			"parameters": [
+				{
+					"name": "relativePath",
+					"parameterType": "query"
+				},
+				{
+					"name": "formdata",
+					"parameterType": "formData"
+				}
+			]
+		},
+		"_id": "wm-InsertMultiImgUploadFile-wm.ServiceVariable-1446204291492"
+	},
+	"loginVariable": {
+		"type": "string",
+		"owner": "App",
+		"dataSet": {
+			"username": "",
+			"password": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "username",
+						"type": "string"
+					},
+					{
+						"name": "password",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"onError": "Javascript",
+		"useDefaultSuccessHandler": false,
+		"category": "wm.LoginVariable",
+		"_id": "wm-loginVariable-wm.LoginVariable-1446216332374"
+	},
+	"logoutVariable": {
+		"type": "string",
+		"owner": "App",
+		"saveInPhonegap": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"redirectTo": "Login",
+		"useDefaultSuccessHandler": true,
+		"category": "wm.LogoutVariable",
+		"_id": "wm-logoutVariable-wm.LogoutVariable-1446216332375"
+	},
+	"loggedInUser": {
+		"name": "loggedInUser",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"name": "",
+			"id": "",
+			"tenantId": "",
+			"isAuthenticated": false,
+			"isSecurityEnabled": true,
+			"roles": []
+		},
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"type": "object",
+				"fields": [
+					{
+						"name": "dataValue",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-loggedInUser-wm.Variable-1446216332376"
+	}
+}

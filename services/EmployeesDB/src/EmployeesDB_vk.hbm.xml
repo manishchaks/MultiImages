@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.multiimages.employeesdb">
+    <class entity-name="com.multiimages.employeesdb.Image" table="Image" name="com.multiimages.employeesdb.Image" schema="EmployeesDB">
+        <id name="id" type="integer">
+            <column name="ID" length="1" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="imgdate" type="blob">
+            <column name="imgdate" length="255" not-null="false" precision="19"/>
+        </property>
+        <many-to-one name="employee" class="com.multiimages.employeesdb.Employee" fetch="select">
+            <column name="empid" length="1" not-null="true" precision="19" default="'0'"/>
+        </many-to-one>
+    </class>
+    <class entity-name="com.multiimages.employeesdb.Employee" table="Employee" name="com.multiimages.employeesdb.Employee" schema="EmployeesDB">
+        <id name="id" type="integer">
+            <column name="ID" length="1" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="255" not-null="false" precision="19"/>
+        </property>
+        <set name="images" table="Employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empid"/>
+            </key>
+            <one-to-many class="com.multiimages.employeesdb.Image"/>
+        </set>
+    </class>
+</hibernate-mapping>

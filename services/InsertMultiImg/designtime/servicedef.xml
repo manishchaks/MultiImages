@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="InsertMultiImg" class="com.multiimages.insertmultiimg.InsertMultiImg" type="JavaService" springFile="InsertMultiImg.spring.xml">
+    <operation name="uploadFile">
+        <parameter name="relativePath" typeRef="java.lang.Integer" isList="false"/>
+        <parameter name="files" typeRef="org.springframework.web.multipart.MultipartFile" isList="true"/>
+        <parameter name="httpServletRequest" typeRef="javax.servlet.http.HttpServletRequest" isList="false"/>
+    </operation>
+    <dataobjects/>
+</service>

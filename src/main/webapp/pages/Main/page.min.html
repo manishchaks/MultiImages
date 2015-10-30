@@ -1,0 +1,417 @@
+<style id="Main.css">
+
+</style>
+<script id="Main.js">
+Application.$controller("MainPageController", ["$scope", function($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function() {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+        if (true) {
+            $scope.Widgets.EmployeeLiveform1.novaliadate = true;
+        }
+    };
+
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function() {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+
+Application.$controller("EmployeeGrid1Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("EmployeeLiveform1Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("ImageGrid2Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("ImageLiveform2Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+</script>
+<script id="Main.variables.json">
+var _MainPage_Variables_ ={
+	"EmployeesDBEmployeeData": {
+		"name": "EmployeesDBEmployeeData",
+		"type": "Employee",
+		"isList": true,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "EmployeesDB",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"category": "wm.LiveVariable",
+		"isDefault": true,
+		"_id": "wm-EmployeesDBEmployeeData-wm.LiveVariable-1446202676948",
+		"package": "com.multiimages.employeesdb.Employee",
+		"tableName": "Employee",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 1,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": ""
+				},
+				{
+					"fieldName": "fname",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "fname",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "lname",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "lname",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "city",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "city",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Employee",
+			"fullyQualifiedName": "com.multiimages.employeesdb.Employee",
+			"tableType": "TABLE"
+		},
+		"bindCount": 2
+	},
+	"EmployeesDBImageData": {
+		"name": "EmployeesDBImageData",
+		"type": "Image",
+		"isList": true,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "EmployeesDB",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"category": "wm.LiveVariable",
+		"isDefault": true,
+		"_id": "wm-EmployeesDBImageData-wm.LiveVariable-1446202687242",
+		"package": "com.multiimages.employeesdb.Image",
+		"tableName": "Image",
+		"tableType": "TABLE",
+		"properties": [
+			"employee"
+		],
+		"relatedTables": [
+			{
+				"columnName": "employee",
+				"relationName": "employee",
+				"type": "Employee",
+				"package": "com.EmployeesDB.Image",
+				"watchOn": "EmployeesDBEmployeeData"
+			}
+		],
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "ID",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 1,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": ""
+				},
+				{
+					"fieldName": "imgdate",
+					"type": "blob",
+					"hibernateType": "binary",
+					"fullyQualifiedType": "blob",
+					"columnName": "imgdate",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "employee",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "empid",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 1,
+					"precision": 19,
+					"generator": null,
+					"isRelated": true,
+					"defaultValue": "0",
+					"relatedTableName": "Employee",
+					"relatedEntityName": "Employee",
+					"columns": [
+						{
+							"fieldName": "id",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "ID",
+							"isPrimaryKey": true,
+							"notNull": true,
+							"length": 1,
+							"precision": 19,
+							"generator": "identity",
+							"isRelated": false,
+							"defaultValue": "",
+							"isRelatedPk": "true"
+						},
+						{
+							"fieldName": "fname",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "fname",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						},
+						{
+							"fieldName": "lname",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "lname",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						},
+						{
+							"fieldName": "city",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "city",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						}
+					],
+					"relatedFieldName": "employee.id",
+					"disableInlineEditing": "true"
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Image",
+			"fullyQualifiedName": "com.multiimages.employeesdb.Image",
+			"tableType": "TABLE"
+		},
+		"bindCount": 2
+	}
+}
+</script>
+<script id="Main.html" type="text/ng-template">
+<wm-page data-ng-controller="MainPageController" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livegrid name="EmployeeLivegrid1" service="EmployeesDB@Employee">
+                <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="EmployeeGrid1" dataset="bind:Variables.EmployeesDBEmployeeData.dataSet">
+                    <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="fname" caption="Fname" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="lname" caption="Lname" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="city" caption="City" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" title="Details" name="EmployeeLiveform1" dataset="bind:Variables.EmployeesDBEmployeeData.dataSet" formtype="inline">
+                    <wm-layoutgrid name="layoutgrid1">
+                        <wm-gridrow show="hide" name="gridrow1">
+                            <wm-gridcolumn show="show" name="gridcolumn1" columnwidth="12">
+                                <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true" placeholder="Enter value" multiple="false" regexp=".*" step="1"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow show="show" name="gridrow2">
+                            <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
+                                <wm-form-field display-name="Fname" show="true" primary-key="false" generator="null" key="fname" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow show="show" name="gridrow3">
+                            <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
+                                <wm-form-field display-name="Lname" show="true" primary-key="false" generator="null" key="lname" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow show="show" name="gridrow4">
+                            <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
+                                <wm-form-field display-name="City" show="true" primary-key="false" generator="null" key="city" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="glyphicon glyphicon-save" type="Submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+            <wm-livegrid name="ImageLivegrid2" service="EmployeesDB@Image">
+                <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="ImageGrid2" dataset="bind:Variables.EmployeesDBImageData.dataSet">
+                    <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="imgdate" caption="Imgdate" type="blob" widget-type="image" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"><img width="48px" height="28px" class="" data-ng-src="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}">
+                    </wm-grid-column>
+                    <wm-grid-column binding="employee.id" caption="Employee Id" type="integer" primary-key="true" generator="identity" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="employee.fname" caption="Employee Fname" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="true" is-related-pk="false" pcdisplay="true"
+                    mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="employee.lname" caption="Employee Lname" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="true" is-related-pk="false" pcdisplay="true"
+                    mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="employee.city" caption="Employee City" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="true" is-related-pk="false" pcdisplay="true"
+                    mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" title="Details" name="ImageLiveform2" dataset="bind:Variables.EmployeesDBImageData.dataSet" formtype="inline">
+                    <wm-layoutgrid name="layoutgrid2">
+                        <wm-gridrow show="hide" name="gridrow5">
+                            <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
+                                <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow show="show" name="gridrow6">
+                            <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12">
+                                <wm-form-field display-name="Imgdate" show="true" primary-key="false" generator="null" key="imgdate" type="blob" maxvalue="255" is-related="false" readonly="false" required="false"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow show="show" name="gridrow7">
+                            <wm-gridcolumn show="show" name="gridcolumn7" columnwidth="12">
+                                <wm-form-field display-name="Employee" show="true" primary-key="false" generator="null" key="employee" type="list" is-related="true" readonly="false" required="true" related-field-name="lname" default-value="0"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="glyphicon glyphicon-save" display-name="Save" show="true" type="Submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+            <wm-livelist listclass="list-group" itemclass="list-group-item" name="livelist1" dataset="bind:Variables.EmployeesDBImageData.dataSet">
+                <wm-listtemplate layout="panel" name="listtemplate1">
+                    <wm-panel collapsible="true" class="panel-default" data-template-ctr="true" showheader="true" name="panel1">
+                        <wm-label width="100%" caption="bind:Variables.EmployeesDBImageData.dataSet.id" name="label1"></wm-label>
+                        <wm-picture name="picture1" picturesource="bind:'services/EmployeesDB/Image/'+ Variables.EmployeesDBImageData.dataSet.id +'/content/imgdate'" width="40" height="40"></wm-picture>
+                    </wm-panel>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

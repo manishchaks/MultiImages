@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="EmployeesDB" type="DataService" springFile="EmployeesDB.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.EmployeesDB.Image">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="employee" typeRef="com.EmployeesDB.Employee" isList="false" allowNull="false"/>
+            <element name="imgdate" typeRef="byte" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.EmployeesDB.Employee">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="fname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lname" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="images" typeRef="com.EmployeesDB.Image" isList="true" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>
