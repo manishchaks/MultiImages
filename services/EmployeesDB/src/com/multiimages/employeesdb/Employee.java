@@ -41,9 +41,9 @@ public class Employee  implements java.io.Serializable
 
 
 private Integer id;
+private String city;
 private String fname;
 private String lname;
-private String city;
 private Set<Image> images = new HashSet<Image>(0);
 
     public Employee() {
@@ -66,6 +66,17 @@ private Set<Image> images = new HashSet<Image>(0);
 
     
 
+    @Column(name="city")
+    public String getCity() {
+        return this.city;
+    }
+    
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    
+
     @Column(name="fname")
     public String getFname() {
         return this.fname;
@@ -84,17 +95,6 @@ private Set<Image> images = new HashSet<Image>(0);
     
     public void setLname(String lname) {
         this.lname = lname;
-    }
-
-    
-
-    @Column(name="city")
-    public String getCity() {
-        return this.city;
-    }
-    
-    public void setCity(String city) {
-        this.city = city;
     }
 
 @OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="employee")

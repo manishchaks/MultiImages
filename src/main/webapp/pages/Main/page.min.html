@@ -107,6 +107,20 @@ var _MainPage_Variables_ ={
 					"defaultValue": ""
 				},
 				{
+					"fieldName": "city",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "city",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
 					"fieldName": "fname",
 					"type": "string",
 					"hibernateType": "string",
@@ -126,20 +140,6 @@ var _MainPage_Variables_ ={
 					"hibernateType": "string",
 					"fullyQualifiedType": "string",
 					"columnName": "lname",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": null,
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "city",
-					"type": "string",
-					"hibernateType": "string",
-					"fullyQualifiedType": "string",
-					"columnName": "city",
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 255,
@@ -265,6 +265,21 @@ var _MainPage_Variables_ ={
 							"isRelatedPk": "true"
 						},
 						{
+							"fieldName": "city",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "city",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						},
+						{
 							"fieldName": "fname",
 							"type": "string",
 							"hibernateType": "string",
@@ -293,21 +308,6 @@ var _MainPage_Variables_ ={
 							"isRelated": false,
 							"defaultValue": null,
 							"disableInlineEditing": "true"
-						},
-						{
-							"fieldName": "city",
-							"type": "string",
-							"hibernateType": "string",
-							"fullyQualifiedType": "string",
-							"columnName": "city",
-							"isPrimaryKey": false,
-							"notNull": false,
-							"length": 255,
-							"precision": 19,
-							"generator": null,
-							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
 						}
 					],
 					"relatedFieldName": "employee.id",
@@ -328,9 +328,9 @@ var _MainPage_Variables_ ={
 <script id="Main.html" type="text/ng-template">
 <wm-page data-ng-controller="MainPageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
-    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1">
+        <wm-left-panel name="left_panel1" columnwidth="2" content="leftnav"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
             <wm-livegrid name="EmployeeLivegrid1" service="EmployeesDB@Employee">
                 <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="EmployeeGrid1" dataset="bind:Variables.EmployeesDBEmployeeData.dataSet">
                     <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
@@ -369,7 +369,7 @@ var _MainPage_Variables_ ={
             <wm-livegrid name="ImageLivegrid2" service="EmployeesDB@Image">
                 <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="ImageGrid2" dataset="bind:Variables.EmployeesDBImageData.dataSet">
                     <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-column binding="imgdate" caption="Imgdate" type="blob" widget-type="image" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"><img width="48px" height="28px" class="" data-ng-src="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}">
+                    <wm-grid-column binding="imgdate" caption="Imgdate" type="blob" widget-type="image" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"><img class="" data-ng-src="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}" height="28px" width="48px">
                     </wm-grid-column>
                     <wm-grid-column binding="employee.id" caption="Employee Id" type="integer" primary-key="true" generator="identity" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                     <wm-grid-column binding="employee.fname" caption="Employee Fname" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="true" is-related-pk="false" pcdisplay="true"

@@ -1,8 +1,8 @@
 <wm-page data-ng-controller="MainPageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
-    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1">
+        <wm-left-panel name="left_panel1" columnwidth="2" content="leftnav"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
             <wm-livegrid name="EmployeeLivegrid1" service="EmployeesDB@Employee">
                 <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="EmployeeGrid1" dataset="bind:Variables.EmployeesDBEmployeeData.dataSet">
                     <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
@@ -41,7 +41,7 @@
             <wm-livegrid name="ImageLivegrid2" service="EmployeesDB@Image">
                 <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="ImageGrid2" dataset="bind:Variables.EmployeesDBImageData.dataSet">
                     <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-column binding="imgdate" caption="Imgdate" type="blob" widget-type="image" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"><img width="48px" height="28px" class="" data-ng-src="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}">
+                    <wm-grid-column binding="imgdate" caption="Imgdate" type="blob" widget-type="image" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"><img class="" data-ng-src="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}" height="28px" width="48px">
                     </wm-grid-column>
                     <wm-grid-column binding="employee.id" caption="Employee Id" type="integer" primary-key="true" generator="identity" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                     <wm-grid-column binding="employee.fname" caption="Employee Fname" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="true" is-related-pk="false" pcdisplay="true"

@@ -26,7 +26,7 @@ Application.$controller("leftnavPageController", ["$scope", function($scope) {
 }]);
 </script>
 <script id="leftnav.variables.json">
-var _leftnavPage_Variables_ ={};
+var _leftnavPage_Variables_ ={}
 </script>
 <script id="leftnav.html" type="text/ng-template">
 <wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="left-panel">
@@ -35,7 +35,7 @@ var _leftnavPage_Variables_ ={};
             <wm-anchor caption="Dashboard" name="dashboardButton" iconclass="glyphicon glyphicon-dashboard" class="active"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_inTheNews">
-            <wm-anchor caption="Pending Orders" name="porderButton" iconclass="glyphicon glyphicon-file"></wm-anchor>
+            <wm-anchor on-click="goToPage_Page" caption="MultiImageBlog" name="porderButton" iconclass="glyphicon glyphicon-file"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_share">
             <wm-anchor caption="Inventory" name="inventoryButton" iconclass="glyphicon glyphicon-tags"></wm-anchor>

@@ -8,9 +8,9 @@
         </dataobject>
         <dataobject javaType="com.EmployeesDB.Employee">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="city" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="fname" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="lname" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="city" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="images" typeRef="com.EmployeesDB.Image" isList="true" allowNull="true"/>
         </dataobject>
     </dataobjects>
